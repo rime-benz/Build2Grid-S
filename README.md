@@ -6,18 +6,18 @@
 
 ------------------------------------------------------------------------
 
-## 🎯 Objectifs
+##  Objectifs
 
--   ⚡ Raccorder efficacement un territoire au réseau électrique
--   🏥 Prioriser les **sites critiques** (hôpital en phase 0)
--   📊 Maximiser les **logements raccordés tôt**
--   💰 Respecter budget & capacité terrain
--   🧠 Exploiter une **métrique dynamique** 
--   📍 Automatisation SIG (QGIS + Python)
+-    Raccorder efficacement un territoire au réseau électrique
+-    Prioriser les **sites critiques** (hôpital en phase 0)
+-    Maximiser les **logements raccordés tôt**
+-    Respecter budget & capacité terrain
+-    Exploiter une **métrique dynamique** 
+-    Automatisation SIG (QGIS + Python)
 
 ------------------------------------------------------------------------
 
-## 🧠 Modèle Build2Grid‑S --- Paramètres du raccordement
+##  Modèle Build2Grid‑S --- Paramètres du raccordement
 
   Paramètre                Valeur / Rôle
   ------------------------ ---------------------------------------------------------
@@ -25,12 +25,12 @@
   Coûts                    500 €/m --- 750 €/m --- 900 €/m
   Temps d'installation     2h/m --- 4h/m --- 5h/m (4 ouvriers max)
   Coût main‑d'œuvre        300 €/jour / ouvrier
-  Site critique            Hôpital (autonomie 20h → intervention ≤ 16h ✅)
+  Site critique            Hôpital (autonomie 20h → intervention ≤ 16h )
   Critères                 Distance réseau, nb logements, surface, puissance, zone
 
 ------------------------------------------------------------------------
 
-## 🚦 Phasage du raccordement
+##  Phasage du raccordement
 
   Phase     Cible                   Logements   Progression             Budget
   --------- --------------------- ----------- ------------- ------------------
@@ -42,7 +42,7 @@
 
 ------------------------------------------------------------------------
 
-## 🗂️ Architecture du projet
+##  Architecture du projet
 
     Build2Grid/
      ├── data/
@@ -57,7 +57,7 @@
 
 ------------------------------------------------------------------------
 
-## ▶️ Exécution
+##  Exécution
 
 ``` bash
 jupyter notebook Script_optimisation.ipynb
@@ -65,25 +65,21 @@ jupyter notebook Script_optimisation.ipynb
 
 ------------------------------------------------------------------------
 
-## 📊 Sorties générées
+##  Sorties générées
 
--   ✅ Tableaux phases & logements
--   ✅ Graphiques progression & répartition réseau
--   ✅ Carte QGIS
--   ✅ Rapport automatisé **Word + PDF**
-
-------------------------------------------------------------------------
-
-## 🚀 Améliorations futures
-
--   🌄 Prise en compte du relief
--   👷 Multi‑équipes + diagramme Gantt
--   🌐 Interface web interactive
--   🤖 IA : suggestion automatique de tracé réseau
+-    Tableaux phases & logements
+-    Graphiques progression & répartition réseau
+-    Carte QGIS
+-    Rapport automatisé **Word + PDF**
 
 ------------------------------------------------------------------------
 
-## © Licence
+##  Améliorations futures
 
-Projet Build2Grid --- 2025\
-Open collaboration --- contribution bienvenue !
+-    Prise en compte du relief
+-    Multi‑équipes + diagramme Gantt
+-    Interface web interactive
+-    IA : suggestion automatique de tracé réseau
+
+------------------------------------------------------------------------
+
