@@ -1,5 +1,4 @@
 # Build2Grid-S : Paramètres du Modèle de Raccordement
-# ⚡ Build2Grid --- Smart Electrification Planning
 
 > **Build2Grid** optimise le raccordement électrique des bâtiments en
 > combinant SIG, Python et une logique de priorisation intelligente
