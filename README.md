@@ -1,22 +1,90 @@
 # Build2Grid-S : Paramètres du Modèle de Raccordement
-Ce document liste l’ensemble des paramètres nécessaires pour modéliser le coût et la faisabilité d’un raccordement.
+# ⚡ Build2Grid --- Smart Electrification Planning
 
-Paramètres
+> **Build2Grid** optimise le raccordement électrique des bâtiments en
+> combinant SIG, Python et une logique de priorisation intelligente
+> (coût, distance, densité, criticité hospitalière).
 
-Coût au m²: Coût de construction ou raccordement par surface
+------------------------------------------------------------------------
 
-Type de bâtiment: Usage du bâtiment (résidentiel, industriel)
+## 🎯 Objectifs
 
-Type d’implémentation: Mode d’intégration (neuf, rénovation, extension, souterrain, aerien)
+-   ⚡ Raccorder efficacement un territoire au réseau électrique
+-   🏥 Prioriser les **sites critiques** (hôpital en phase 0)
+-   📊 Maximiser les **logements raccordés tôt**
+-   💰 Respecter budget & capacité terrain
+-   🧠 Exploiter une **métrique dynamique** 
+-   📍 Automatisation SIG (QGIS + Python)
 
-Surface totale (m²): Superficie du bâtiment, utilisée pour calculer le coût global
+------------------------------------------------------------------------
 
-Longueur de raccordement (m): Distance entre le bâtiment et le réseau existant
+## 🧠 Modèle Build2Grid‑S --- Paramètres du raccordement
 
-Puissance demandée (kW): Niveau de consommation prévu, impacte le dimensionnement
+  Paramètre                Valeur / Rôle
+  ------------------------ ---------------------------------------------------------
+  Types d'infrastructure   Aérien / Semi‑aérien / Fourreau
+  Coûts                    500 €/m --- 750 €/m --- 900 €/m
+  Temps d'installation     2h/m --- 4h/m --- 5h/m (4 ouvriers max)
+  Coût main‑d'œuvre        300 €/jour / ouvrier
+  Site critique            Hôpital (autonomie 20h → intervention ≤ 16h ✅)
+  Critères                 Distance réseau, nb logements, surface, puissance, zone
 
-Zone d’implantation: Contexte géographique (urbain, rural, industriel)
+------------------------------------------------------------------------
 
-Technologie de raccordement: Type de réseau (souterrain, aérien ou mixte)
+## 🚦 Phasage du raccordement
 
-Nombre d’unités / logements: Pour adapter la capacité du raccordement
+  Phase     Cible                   Logements   Progression             Budget
+  --------- --------------------- ----------- ------------- ------------------
+  Phase 0   Hôpital                    1 site           ---   Priorité absolue
+  Phase 1   Haute densité                                                  40%
+  Phase 2   Services publics                                               20%
+  Phase 3   Maisons diffuses                                                20%
+  Phase 4   Finalisation réseau                                              20%
+
+------------------------------------------------------------------------
+
+## 🗂️ Architecture du projet
+
+    Build2Grid/
+     ├── data/
+     │   ├── batiments.csv
+     │   ├── infra.csv
+     ├── scripts/
+     │   └── Script_optimisation.ipynb
+     ├── outputs/
+     │   ├── graphs/
+     │   └── reports/
+     └── README.md
+
+------------------------------------------------------------------------
+
+## ▶️ Exécution
+
+``` bash
+jupyter notebook Script_optimisation.ipynb
+```
+
+------------------------------------------------------------------------
+
+## 📊 Sorties générées
+
+-   ✅ Tableaux phases & logements
+-   ✅ Graphiques progression & répartition réseau
+-   ✅ Carte QGIS
+-   ✅ Rapport automatisé **Word + PDF**
+
+------------------------------------------------------------------------
+
+## 🚀 Améliorations futures
+
+-   🌄 Prise en compte du relief
+-   👷 Multi‑équipes + diagramme Gantt
+-   🌐 Interface web interactive
+-   🤖 IA : suggestion automatique de tracé réseau
+
+------------------------------------------------------------------------
+
+## © Licence
+
+Projet Build2Grid --- 2025\
+Open collaboration --- contribution bienvenue !
